@@ -1,6 +1,7 @@
 from bs4 import BeautifulSoup
 import requests
-import matplotlib as plt
+import time
+
 class color:
    PURPLE = '\033[95m'
    CYAN = '\033[96m'
@@ -13,7 +14,9 @@ class color:
    UNDERLINE = '\033[4m'
    END = '\033[0m'
 
-
+print color.BOLD + "Printing the results of searching 'macbook pro touchbar' in boston.craigslist.org site" + color.END 
+print "Waiting you to read for 5 seconds"
+time.sleep(3)
 url = "https://boston.craigslist.org/search/sya?query=macbook+pro+touchbar"
 response = requests.get(url)
 data = response.text
